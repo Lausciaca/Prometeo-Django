@@ -46,15 +46,11 @@
                                     <a href="#">Modalidades</a>
                                     <div class="dropdown-content-modalidades">
                                         <ul>
+                                            {% for modalidad in modalidades %}
                                             <li>
-                                                <a href="/alumnos/modalidades/informatica">Informatica</a>
+                                                <a href="{% url 'alumnos_modalidades' modalidad.slug %}">{{modalidad.name}}</a>
                                             </li>
-                                            <li>
-                                                <a href="/alumnos/modalidades/administracion">Administracion</a>
-                                            </li>
-                                            <li>
-                                                <a href="/alumnos/modalidades/electromecanica">Electromecanica</a>
-                                            </li>
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                 </li>

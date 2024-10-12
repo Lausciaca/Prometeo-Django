@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from .views import HomePageView
 
 urlpatterns = [
@@ -8,5 +8,5 @@ urlpatterns = [
     path('alumnos/inscripciones', HomePageView.as_view(), name="alumnos_inscripciones"),
     path('alumnos/examenes', HomePageView.as_view(), name="alumnos_examenes"),
     path('alumnos/horarios', HomePageView.as_view(), name="alumnos_horarios"),
-    path('alumnos/modalidades', HomePageView.as_view(), name="alumnos_horarios"),
+    path('alumnos/modalidades/', include('modalidades.urls')),
 ]

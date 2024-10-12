@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'materias',
     'formularios',
     'novedades',
-    'core'
+    'core',
+    'modalidades'
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'modalidades.processors.ctx_dict'
             ],
         },
     },
