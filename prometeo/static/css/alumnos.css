@@ -1,0 +1,119 @@
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centro de estudiantes */
+.img-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.img-promo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.img-promo h3{
+    padding: 5px;
+    text-align: center;
+    width: 90%;
+    font-size: 20px;
+    color: #377BFD;
+    border-bottom: 2px solid #377BFD;
+    margin-bottom: 20px;
+}
+.img-promo img{
+    object-fit: cover;
+    width: 85%;
+}
+
+
+/* EXAMENES */
+.tag-container{
+    margin-bottom: 15px
+}
+
+/* Modalidaes */
+.row-1, .row-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+.row-1 .image-content, .row-2 .image-content{
+    width: 40%;
+}
+.row-1 .image-content img, .row-2 .image-content img{
+    width: 100%;
+    height: fit-content;
+}
+.row-1 .texto, .row-2 .texto{
+    width: 50%;
+}
+.row-1 .texto p, .row-2 .texto p{
+    padding: 10px 0;
+}
+
+
+/* Horarios */
+.card-container{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10vh;
+}
+.card{
+    width: 48%;
+    height: 20vh;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+.card .wave{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: white;  
+}
+.wave-1{
+    background-color: #3498DB;
+}
+.wave-2{
+    background-color: #1ABC9C;
+}
+.wave-3{
+    background-color: #F1C40F;
+}
+.wave-4{
+    background-color: #E67E22;
+}
+.wave-5{
+    background-color: #E74C3C;
+}
+.wave-6{
+    background-color: #9B59B6;
+}
+.card .wave h4{
+    margin: auto auto 3% auto;
+}
+.card ul{
+    display: flex;
+    list-style: none;
+    width: 70%;
+    height: 30%;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+.card ul li a{
+    color: #0209B7;
+    margin: auto 4px;
+    padding: 10px;
+}
