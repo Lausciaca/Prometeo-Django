@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Libro
+from .models import Materia
 
 # Register your models here.
-class LibroAdmin(admin.ModelAdmin):
+class MateriaAdmin(admin.ModelAdmin):
     readonly_fields = ['created', 'updated']
     
-admin.site.register(Libro, LibroAdmin)
+admin.site.register(Materia, MateriaAdmin)
