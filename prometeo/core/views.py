@@ -16,3 +16,4 @@ class SecretariaPageView(TemplateView):
     
 class ContactoPageView(TemplateView):
     template_name = 'core/contacto.html'
+    

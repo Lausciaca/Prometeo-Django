@@ -1,0 +1,90 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Horarios{% endblock title %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/alumnos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/textos.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="container">
+    <h2 class="txt_principal">Horarios</h2>
+    <div class="card-container">
+        <div class="card">
+            <div class="wave wave-1">
+                <h4>Primer año</h4>
+            </div>
+            <ul>
+                <li><a href="#">A</a></li>
+                <li><a href="#">B</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">D</a></li>
+                <li><a href="#">E</a></li>
+                <li><a href="#">F</a></li>
+                <li><a href="#">G</a></li>
+                <li><a href="#">H</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="wave wave-2">
+                <h4>Segundo año</h4>
+            </div>
+            <ul>
+                <li><a href="#">A</a></li>
+                <li><a href="#">B</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">D</a></li>
+                <li><a href="#">E</a></li>
+                <li><a href="#">F</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="wave wave-3">
+                <h4>Tercer año</h4>
+            </div>
+            <ul>
+                <li><a href="#">A</a></li>
+                <li><a href="#">B</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">D</a></li>
+                <li><a href="#">E</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="wave wave-4">
+                <h4>Cuarto año</h4>
+            </div>
+            <ul>
+                <li><a href="#">A</a></li>
+                <li><a href="#">B</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">D</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="wave wave-5">
+                <h4>Quinto año</h4>
+            </div>
+            <ul>
+                <li><a href="#">A</a></li>
+                <li><a href="#">B</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">D</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="wave wave-6">
+                <h4>Sexto año</h4>
+            </div>
+            <ul>
+                <li><a href="#">A</a></li>
+                <li><a href="#">B</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">D</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}
