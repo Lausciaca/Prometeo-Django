@@ -4,12 +4,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio</title>
+        <title>{% block title %}{% endblock title %}</title>
         <link rel="stylesheet" href="{% static 'css/index.css' %}">
         <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static '/css/layout/nav.css' %}">
         <link rel="stylesheet" href="{% static '/css/layout/footer.css' %}">
         <script src="https://kit.fontawesome.com/3e470c9a7d.js" crossorigin="anonymous"></script>
+        {% block extra_css %}
+        
+        {% endblock extra_css %}
     </head>
     <body>
         <nav class="nav">
@@ -27,7 +30,7 @@
             <div class="links">
                 <ul>
                     <li>
-                        <a href="/institucion" class="active">Institucion</a>
+                        <a href="{% url 'institucion' %}" class="active">Institucion</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="link-alumnos">Alumnos</a>
