@@ -13,3 +13,6 @@ class InstitucionPageView(TemplateView):
     
 class SecretariaPageView(TemplateView):
     template_name = 'core/secretaria.html'
+    
+class ContactoPageView(TemplateView):
+    template_name = 'core/contacto.html'
