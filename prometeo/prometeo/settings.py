@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'formularios',
     'novedades',
     'core',
-    'modalidades'
+    'modalidades',
+    'alumnos'
 ]
 
 MIDDLEWARE = [

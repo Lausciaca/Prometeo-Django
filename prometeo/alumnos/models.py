@@ -6,20 +6,18 @@ class Curso(models.Model):
     name = models.IntegerField(verbose_name='Curso')
     created = models.DateTimeField(auto_now_add=True)  
     updated = models.DateTimeField(auto_now=True)
-    creator_id = models.ForeignKey(User, verbose_name="Creador", on_delete=models.CASCADE)
 
     def __str__(self):  
-        return self.name
+        return str(self.name)
     
 class Division(models.Model):
     name = models.CharField(max_length=50)
     curso = models.ForeignKey(Curso, verbose_name='Curso', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)  
     updated = models.DateTimeField(auto_now=True)  
-    creator_id = models.ForeignKey(User, verbose_name="Creador", on_delete=models.CASCADE)
 
     def __str__(self):  
-        return (self.name + self.curso)
+        return f" {self.curso} {self.name}"
 
 class CDE(models.Model):
     content= models.TextField(verbose_name='Contenido')
@@ -48,7 +46,7 @@ class Examen(models.Model):
     test_start_date = models.DateField(auto_now=False, auto_now_add=False, verbose_name='Fecha de inicio de examenes')
     test_end_date = models.DateField(auto_now=False, auto_now_add=False, verbose_name='Fecha de fin de examenes')
     content = models.TextField(verbose_name='Contenido')
-    link = models.URLField(verbose_name='Link formulario', max_length=200)
+    link = models.URLField(verbose_name='Link formulario', max_length=250)
     created = models.DateTimeField(auto_now_add=True)  
     updated = models.DateTimeField(auto_now=True)  
     creator_id = models.ForeignKey(User, verbose_name="Creador", on_delete=models.CASCADE)
@@ -59,5 +57,11 @@ class Examen(models.Model):
 class Horario(models.Model):
     division = models.ForeignKey(Division, verbose_name='Curso/Division', on_delete=models.CASCADE)
     link = models.URLField(verbose_name='Link a horario', max_length=200)
+    created = models.DateTimeField(auto_now_add=True)  
+    updated = models.DateTimeField(auto_now=True)  
+    creator_id = models.ForeignKey(User, verbose_name="Creador", on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return f"Horario de {self.division}"
     
     
