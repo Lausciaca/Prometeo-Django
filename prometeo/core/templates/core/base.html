@@ -30,10 +30,10 @@
             <div class="links">
                 <ul>
                     <li>
-                        <a href="{% url 'institucion' %}" class="active">Institucion</a>
+                        <a href="{% url 'institucion' %}" class="{% if request.path == '/institucion' %}active{% endif %}">Institucion</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="link-alumnos">Alumnos</a>
+                        <a href="#" class="link-alumnos {% if request.path|slice:":9" == '/alumnos/' %}active{% endif %}">Alumnos</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li>
@@ -64,13 +64,13 @@
                         </div>
                     </li>
                     <li>
-                        <a href="{% url 'biblioteca' %}" class="active">Biblioteca</a>
+                        <a href="{% url 'biblioteca' %}" class="{% if request.path == '/biblioteca' %}active{% endif %}">Biblioteca</a>
                     </li>
                     <li>
-                        <a href="{% url "secretaria" %}" class="active">Secretaría</a>
+                        <a href="{% url "secretaria" %}" class="{% if request.path == '/secretaria' %}active{% endif %}">Secretaría</a>
                     </li>
                     <li>
-                        <a href="{% url "contacto" %}" class="active">Contacto</a>
+                        <a href="{% url "contacto" %}" class="{% if request.path == '/contacto' %}active{% endif %}">Contacto</a>
                     </li>
                 </ul>
             </div>
