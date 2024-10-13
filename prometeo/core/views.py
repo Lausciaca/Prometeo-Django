@@ -10,3 +10,6 @@ class HomePageView(ListView):
     
 class InstitucionPageView(TemplateView):
     template_name = 'core/institucion.html'
+    
+class SecretariaPageView(TemplateView):
+    template_name = 'core/secretaria.html'
