@@ -92,3 +92,15 @@
     font-size: 11px;
     margin-top: auto;
 }
+
+
+@media (max-width: 768px) {
+    .p_block{
+        width: 80%;
+    }
+}
+@media (max-width: 425px) {
+    .p_block{
+        width: 90%;
+    }
+}
