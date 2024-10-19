@@ -27,7 +27,15 @@
                     </div>
                 </a>
             </div>
-            <div class="links">
+            
+            <!-- Botón para el menú hamburguesa -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        
+            <div class="links" id="nav-links">
                 <ul>
                     <li>
                         <a href="{% url 'institucion' %}" class="{% if request.path == '/institucion' %}active{% endif %}">Institucion</a>
@@ -75,6 +83,19 @@
                 </ul>
             </div>
         </nav>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const navLinks = document.getElementById('nav-links');
+            
+                mobileMenu.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            });
+        </script>
+        
+        
 
         {% block content %}{% endblock content %}
 

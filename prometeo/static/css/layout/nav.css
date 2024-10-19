@@ -79,29 +79,35 @@ a{
 }
 
 /* menu dropdown */
-.dropdown{
+.dropdown {
     position: relative;
 }
-.dropdown-content{
+
+.dropdown-content {
     display: none;
-    position: absolute;
-    width: 185%;
-    top: 100%;
+    position: absolute; /* Mantiene la posición absoluta respecto al contenedor padre */
+    width: 185%; /* Puedes ajustar el ancho según sea necesario */
+    top: 100%; /* Se mantiene justo debajo del enlace */
+    left: 0; /* Alinea a la izquierda del contenedor padre */
     background-color: #3464F4;
     z-index: 1;
 }
 
-.dropdown-content ul{
-    margin: 10px auto;
+.dropdown-content ul {
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Asegúrate de que no haya padding */
     display: flex;
     flex-direction: column;
 }
-.dropdown-content ul li{
+
+.dropdown-content ul li {
     width: 100%;
-    height: 60px;
+    height: auto; /* Permite que se ajuste automáticamente */
 }
-.dropdown-content ul li a{
+
+.dropdown-content ul li a {
     font-size: 16px;
+    padding: 10px 15px; /* Establece un padding fijo para el enlace */
 }
 .dropdown:hover .dropdown-content{
     display: block;
@@ -136,4 +142,65 @@ a{
 }
 .dropdown-content ul li a:hover{
     background-color: #1F37D6;
+}
+
+
+/* Estilos para el botón del menú hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+
+/* Estilos para el menú en pantallas pequeñas */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Muestra el menú hamburguesa en pantallas pequeñas */
+    }
+
+    .links {
+        display: none; /* Oculta los enlaces inicialmente */
+        flex-direction: column; /* Cambia a columna para el menú hamburguesa */
+        position: absolute; /* Posiciona el menú */
+        background-color: #2554e0; /* Mismo color de fondo que la nav */
+        width: 100%;
+        top: 75px; /* Alineación justo debajo de la nav */
+        left: 0;
+        z-index: 1000; /* Asegura que se muestre sobre otros elementos */
+    }
+
+    .links.active {
+        display: flex; /* Muestra el menú cuando está activo */
+        height: 50vh;
+    }
+
+    .links ul {
+        flex-direction: column; /* Cambia la dirección a columna */
+        margin: 0;
+        padding: 0;
+    }
+
+    .links ul li {
+        width: 100%; /* Hace que los enlaces ocupen el 100% */
+        text-align: center; /* Alinea el texto al centro */
+        height: auto; /* Ajusta la altura a auto */
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block; /* Se muestra al hacer hover */
+        position: absolute; 
+        width: 100%;
+        height: 30vh;
+    }
 }
