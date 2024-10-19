@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
 class Curso(models.Model):
@@ -23,7 +22,6 @@ class CDE(models.Model):
     content= models.TextField(verbose_name='Contenido')
     created = models.DateTimeField(auto_now_add=True)  
     updated = models.DateTimeField(auto_now=True)  
-    creator_id = models.ForeignKey(User, verbose_name="Creador", on_delete=models.CASCADE)
     
     def __str__(self):
         return self.created
@@ -34,7 +32,6 @@ class Inscripcion(models.Model):
     link = models.URLField(verbose_name='Link a formulario', max_length=200)
     created = models.DateTimeField(auto_now_add=True)  
     updated = models.DateTimeField(auto_now=True)  
-    creator_id = models.ForeignKey(User, verbose_name="Creador", on_delete=models.CASCADE)
     
     def __str__(self):
         return self.title
@@ -49,7 +46,6 @@ class Examen(models.Model):
     link = models.URLField(verbose_name='Link formulario', max_length=250)
     created = models.DateTimeField(auto_now_add=True)  
     updated = models.DateTimeField(auto_now=True)  
-    creator_id = models.ForeignKey(User, verbose_name="Creador", on_delete=models.CASCADE)
     
     def __str__(self):
         return self.title
@@ -59,7 +55,6 @@ class Horario(models.Model):
     link = models.URLField(verbose_name='Link a horario', max_length=200)
     created = models.DateTimeField(auto_now_add=True)  
     updated = models.DateTimeField(auto_now=True)  
-    creator_id = models.ForeignKey(User, verbose_name="Creador", on_delete=models.CASCADE)
     
     def __str__(self):
         return f"Horario de {self.division}"

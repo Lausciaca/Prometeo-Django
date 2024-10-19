@@ -2,42 +2,37 @@ body{
     background-color: white;
 }
 .container{
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
+    margin: auto;
     justify-content: space-evenly;
 }
 .filters{
-    width: 18%;
+    width: 20%;
 }
 
 table{
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-    width: 60%;
-    margin-bottom: 10vh;
+    width: 70%;
     border-collapse: collapse;
+    height: fit-content;
 }
 table thead{
-    background-color: #1F2C89;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.329);
+    text-align: left;
 }
 th{
-    padding: 12px;
+    padding: 15px;
     width: fit-content;
-    color: white;
-    font-weight: 400;
+    font-weight: bold
 }
 td{   
-    padding: 10px 20px;
+    padding: 16px 20px;
+    border: none;
+    font-size: 0.9rem;
 }
-.titulo{
-    font-weight: bold;
-    border-bottom: 1px solid #585858;
-}
-.isbn{
-    border-bottom: 1px solid #585858;
-}
-.autor, .materia, .editorial{
-    border: 1px solid #585858;
+.table-content{
+    border-bottom: 1px solid #0000003d;
 }
 
 
