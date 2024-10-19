@@ -9,7 +9,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-
 }
 .faq-container h2{
     margin: 0 0 20px 0;
@@ -76,6 +75,7 @@ summary .faq-icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 .map-text{
     margin-bottom: auto;
@@ -87,4 +87,38 @@ summary .faq-icon {
 .map-text h4{
     font-size: 1.7rem;
     font-weight: 600;
+}
+
+@media (max-width:1024px) {
+    .map .sub-container{
+        width: 75%;
+    }
+}
+@media (max-width:768px) {
+    .map{
+        height: 62vh;
+    }
+    .map .sub-container{
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        width: 90%;
+    }
+    .map .sub-container iframe{
+        max-width: 100%;
+    }
+    .faq{
+        width: 80%;
+    }
+    .faq-container{
+        height: 55vh;
+    }
+}
+@media (max-width:425px) {
+    .map .sub-container{
+        width: 100%;
+    }
+    .faq-container{
+        height: 65vh;
+    }
 }
