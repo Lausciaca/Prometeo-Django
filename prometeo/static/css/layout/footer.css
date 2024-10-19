@@ -100,3 +100,81 @@
     padding: 10px;
     padding-bottom: 30px;
 }
+
+@media (max-width:1024px) {
+    .footer .top{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 58%;
+        gap: 20px;
+    }
+    .top .info{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-right: 100px;
+    }
+    .top .newsletter{
+        width: 100%;
+        align-items: center;
+    }
+    .input{
+        justify-content: center;
+        gap: 15px;
+    }
+}
+@media (max-width:768px) {
+    .footer .top{
+        width: 78%;
+    }
+    .top .info h4{
+        font-size: 1.1rem;
+    }
+    .top .newsletter h3{
+        font-size: 22px;
+    }
+    .input input{
+        width: 70%;
+    }
+    .bottom{
+        width: 85%;
+    }
+}
+@media (max-width:768px) {
+    .footer .top{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 78%;
+        gap: 20px;
+    }
+    .top .info{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .top .info *{
+        text-align: center;
+    }
+    .top .info h4{
+        font-size: 1.2rem;
+    }
+    .top .newsletter{
+        width: 100%;
+        align-items: center;
+    }
+    .top .newsletter h3{
+        font-size: 22px;
+    }
+    .input{
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+    .input input{
+        width: 70%;
+    }
+    .bottom{
+        width: 85%;
+    }
+}
