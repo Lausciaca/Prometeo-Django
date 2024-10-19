@@ -70,58 +70,31 @@
 
 /* Horarios */
 .card-container{
-    width: 65%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 10vh;
+    gap: 20px;
 }
-.card{
-    width: 48%;
-    height: 20vh;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+.card-container .col{
+    width: 30%;
+    padding: 15px 20px;
 }
-.card .wave{
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    letter-spacing: 1px;
-    color: white;  
+
+@media (max-width: 1024px) {
+    .card-container{
+        width: 80%;
+    }
+    .card-container .col{
+        width: 45%;
+    }
 }
-.wave-1{
-    background-color: #3498DB;
-}
-.wave-2{
-    background-color: #1ABC9C;
-}
-.wave-3{
-    background-color: #F1C40F;
-}
-.wave-4{
-    background-color: #E67E22;
-}
-.wave-5{
-    background-color: #E74C3C;
-}
-.wave-6{
-    background-color: #9B59B6;
-}
-.card .wave h4{
-    margin: auto auto 3% auto;
-}
-.card ul{
-    display: flex;
-    list-style: none;
-    width: 70%;
-    height: 30%;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: center;
-}
-.card ul li a{
-    color: #0209B7;
-    margin: auto 4px;
-    padding: 10px;
+@media (max-width: 480px) {
+    .card-container{
+        width: 90%;
+    }
+    .card-container .col{
+        width: 100%;
+    }
 }
