@@ -27,7 +27,7 @@
             <!-- El contenido de novedades dinámico no se puede representar sin el uso de JavaScript -->
             {% for novedad in object_list %}
             <div class="new">
-                <a href="">
+                <a href="novedad/{{novedad.slug}}/">
                     <h5>{{novedad.created}}</h5>
                     <h4>{{novedad.title}}</h4>
                 </a>
